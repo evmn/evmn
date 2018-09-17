@@ -2,6 +2,37 @@
 
 ---
 
+## Programming Language
+
+### Lisp
+
+|Name|Author|Release Date|
+|:-|:-|:-|
+|[How to Design Programs](https://htdp.org/)||2018|
+|Structure and Interpretation of Computer Programs|||
+|Land of Lisp||2010|
+|Realm of Racket|||
+|ANSI Common Lisp|||
+|The Scheme Programming Language|||
+
+
+## Windows Systems
+
+### C#
+
+|Name|Author|Release Date|
+|:-|:-|:-|
+|Microsoft Visual C# Step by Step|||
+
+
+## Skills
+
+|Name|Author|Release Date|
+|:-|:-|:-|
+|More Joel on Software|Joel Spolsky|2008|
+
+
+
 ## Android Development & Reverse Engineering
 
 |Name|Author|Release Date|
@@ -32,3 +63,21 @@ Then copy html to text editor, edit to markdown format, you can add pictures.
 Open Markdown file with `E-Book Viewer`, then you will have a better html file.
 
 Open Calibre, add html file and convert it to epub book, edit metainfo, add cover, generate table of content, then convert to azw3 format, send it to kindle.
+
+
+## Remove Text Watermark from PDF Files
+
+
+Watermark is in the format `(Watermark Text) Tj`, the line start with "(" and end with "Tj". First open PDF file with vim, then can delete watermark in a PDF file with `:g/^(.*Tj$/d`.
+
+If we have a lot pdf file, we can remove text watermark with the script below:
+
+
+```
+#/bin/bash
+
+
+for fullName in *.pdf;do
+    sed -i '/^(.*Tj$/d' "$fullName"
+done
+```
