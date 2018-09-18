@@ -109,3 +109,16 @@ convert -density 300 input.pdf[66] -quality 100 output.png
 
  - -quality xxx will set the compression to xxx for PNG, JPG and MIFF file formates (100 means no compression).
  - [666] will convert only the 667th page to PNG (zero-based numbering so [0] is the 1st page).
+
+
+## Delete several pages from pdf file
+
+First install 'pdftk' with `sudo apt install pdftk`.
+
+If you want to remove 2~4 pages then use the following command:
+
+```sh
+pdftk input.pdf cat 1 5-end output output.pdf
+```
+
+
