@@ -20,7 +20,7 @@ def github_stats(name, width):
 		'&theme=' + theme +'"  width=' + str(width) + '% /></a>'
 	print(stats)
 
-def github_users(user, isIdol):
+def github_users(user, isIdol, api_token = None):
 	page = 1
 	username_list = []
 	while True:
@@ -28,19 +28,23 @@ def github_users(user, isIdol):
 			url = 'https://api.github.com/users/' + user +'/followers?page=' + str(page)
 		else:
 			url = 'https://api.github.com/users/' + user +'/following?page=' + str(page)
-		header = {"Accept": "application/vnd.github.v3+json"}
+		if api_token == None:
+			headers = {"Accept": "application/vnd.github.v3+json"}
+		else:
+			headers = {"Authorization": "token " + api_token, "Accept": "application/vnd.github.v3+json"}
 		page += 1
-		response = requests.get(url, header)
+		response = requests.get(url, headers=headers)
 		idols = response.json()
-		print(idols)
+		#print(idols)
 		if type(idols) != list:
 		# Prevent exception
 		# {'message': "API rate limit exceeded for xx.xx.xx.xx
 			print()
-			print(idols)
+			print(page-1)
 			break
 		for idol in idols:
 			username_list.append(idol['login'])
+		print(page-1, username_list[-30:])
 		if len(idols) < 30 or len(username_list) >= 300:
 			break
 
@@ -68,7 +72,7 @@ def github_users(user, isIdol):
 def main():
 	user = 'evmn'
 	isIdol= False
-	github_users(user, isIdol)
-
+	api_token = None
+	github_users(user, isIdol, api_token)
 if __name__ == "__main__":
 	main()
