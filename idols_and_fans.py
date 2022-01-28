@@ -13,7 +13,7 @@ def github_stats(name, width):
 	hide_rank = 'false'
 	theme = random.choice(themes)
 	stats = '<a href="https://github.com/' + name + '">' + \
-		'<img src="https://github-readme-stats.vercel.app/api?username=' + name + \
+		'<img src="https://evmn.vercel.app/api?username=' + name + \
 		'&count_private=true&show_icons=true' + \
 		'&include_all_commits=' + include_all_commits + \
 		'&hide_rank=' + hide_rank + \
