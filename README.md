@@ -24,6 +24,8 @@ F  | 0 								| stars ≈ followers = 0|3686| -| -
 *The sample data is collected from 9366 of [vbuterin](https://github.com/vbuterin)'s fans, dpolicastro's account can't be accessed any more, vercel.app can't work properly with sw-yx's account, I calculated myself. Rank F is discard. Latest update: 2022-01-29*
 
 
+![](ranks-chart.jpg)
+
 <h3>I am following:</h3>
 <div align="center">
 <a href="https://github.com/evilsocket"><img src="https://evmn.vercel.app/api?username=evilsocket&count_private=true&show_icons=true&include_all_commits=false&hide_rank=false&theme=blueberry"  width=46% /></a>
