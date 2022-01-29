@@ -21,7 +21,7 @@ E  | stars x followers > 30 x 1 ^ 2 | stars ≈ followers > 5|991|17.45%|71.60%
 F+ | stars x followers > 30 x 0 ^ 1 | stars ≈ followers > 0|1613|28.40%|100.00%
 F  | 0 								| stars ≈ followers = 0|3686| -| -
 
-*The sample data is collected from 9366 of [vbuterin](https://github.com/vbuterin)'s fans, dpolicastro's account can't be accessed any more, vercel.app can't work properly with sw-yx's account, I calculated myself. Rank F is discard. Latest update: 2022-01-29*
+*The sample data is collected from 9366 of [vbuterin](https://github.com/vbuterin)'s fans, dpolicastro's account can't be accessed any more, vercel.app can't work properly with sw-yx's account, I calculated it myself. Rank F data is discarded. Latest update: 2022-01-29*
 
 
 ![](ranks-chart.jpg)
